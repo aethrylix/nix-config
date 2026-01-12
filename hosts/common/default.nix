@@ -2,6 +2,7 @@
   lib,
   inputs,
   outputs,
+  pkgs,
   ...
 }:
 
@@ -54,5 +55,9 @@
     nixPath = [
       "/etc/nix/path"
     ];
+  };
+
+  users = {
+    defaultUserShell = pkgs.fish;
   };
 }
